@@ -1,0 +1,16 @@
+<h1>Welcome to Potisfy!</h1>
+<h2>Please Login or Signup</h2>
+
+<nav>
+  <% if logged_in? %>
+
+    <a href="/songs/new"> Create Tweet </a>
+    <a href="/logout"> Log Out </a>
+    <p>Welcome, <%=current_user.username %></p>
+
+  <% else %>
+    <a href="/signup">Sign Up</a>
+    <a href="/login"> Sign In </a>
+  <%end %>
+
+</nav>
