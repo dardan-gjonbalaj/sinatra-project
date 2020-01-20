@@ -1,14 +1,16 @@
 class SongsController < ApplicationController
   get '/songs' do
+    puts params
     "The songs will be here"
   end
 
   get '/songs/new' do
-    if !logged_in?
-      redirect "/login"
-    else
+    #if !logged_in?
+      #redirect "/login"
+    #else
       "Your songs?"
-    end
+      puts params
+    #end
   end
 
   get '/songs/:id/edit' do
@@ -21,5 +23,5 @@ class SongsController < ApplicationController
         redirect "/songs"
       end
     end
-
+    end
 end
