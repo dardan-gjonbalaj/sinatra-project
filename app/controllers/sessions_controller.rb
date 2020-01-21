@@ -1,13 +1,11 @@
 class SessionsController < ApplicationController
 
-  # get '/login' do
-  #   erb :'sessions/login.html'
-  # end
 
-  # post '/sessions' do 
-  #   login(params[:email])
-  #   redirect to '/'
-  # end
+  #  post '/login' do 
+  #    login(params[:email])
+  #    puts params
+  #    redirect to '/songs/new'
+  #  end
 
   # def logout!
   #   logout!
