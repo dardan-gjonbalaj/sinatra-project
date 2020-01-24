@@ -1,0 +1,9 @@
+<h2><a href="<%=@song.link %>" target="_blank">   <%= "#{@song.title} : #{@song.artist}" %></a></h2><br>
+
+
+<form action="/songs/<%=@song.id%>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Song"><br>
+</form> 
+<button><a href="/songs/<%=@song.id%>/edit">Edit Song </a></button>
+<br><button><a href="/songs">Go back to playlist <a></button>

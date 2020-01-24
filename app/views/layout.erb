@@ -9,9 +9,11 @@
   <body>
     
     <div class="container">
-      <h1>Potisfy</h1>
+      <% if logged_in? %>
+      <h2 align="right"><button><a href="/logout">Logout</a></h2></button> 
+      <% end %>
+      <h1 align="left">Potisfy</h1>
       <%= yield %>
-
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
