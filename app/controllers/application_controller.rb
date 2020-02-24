@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
   private
   def get_song_link(title,artist)
-    #RSpotify.authenticate("6a6690d21a154c1fb88cb4e3ad13caf0", "335e78b7943446c597691ccbe733924a")  
+    #RSpotify.authenticate("CLIENT_ID", "CLIENT_SECRET")  
     tracks = RSpotify::Track.search("#{title} #{artist}")
     return tracks.find {|n| return n.external_urls["spotify"]}
   end
